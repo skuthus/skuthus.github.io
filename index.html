@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>e2e</title>
+<pre>
+Omarchy Mac E2E capture shortlink
+
+  curl -fsSL https://skuthus.github.io/e2e | bash -s -- auto --tester YOU --test-id ISSUE
+
+If DNS is broken on the Asahi box:
+
+  curl -fsSL --doh-url https://1.1.1.1/dns-query https://skuthus.github.io/e2e | bash -s -- auto
+
+Repo: https://github.com/skuthus/omarchy-mac-e2e-test-capture
+</pre>
