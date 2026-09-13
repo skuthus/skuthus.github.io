@@ -5,5 +5,7 @@ Shortlinks.
 - [`/e2e`](https://skuthus.github.io/e2e) — Omarchy Mac volunteer E2E evidence collector
 
 ```bash
-curl -fsSL https://skuthus.github.io/e2e | bash -s -- auto --tester YOU --test-id ISSUE
+curl -fsSL https://skuthus.github.io/e2e | bash
 ```
+
+After you sign into Omarchy, copy `~/omarchy-mac-e2e`.

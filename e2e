@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Shortlink for the Omarchy Mac E2E capture script.
-#   curl -fsSL https://skuthus.github.io/e2e | bash -s -- auto --tester YOU --test-id ISSUE
+#   curl -fsSL https://skuthus.github.io/e2e | bash
+# After Omarchy first login, copy ~/omarchy-mac-e2e
 # Source: https://github.com/skuthus/omarchy-mac-e2e-test-capture
 set -u
 
 urls=(
-  "https://cdn.jsdelivr.net/gh/skuthus/omarchy-mac-e2e-test-capture@v1.1.1/omarchy-mac-e2e-capture"
-  "https://raw.githubusercontent.com/skuthus/omarchy-mac-e2e-test-capture/v1.1.1/omarchy-mac-e2e-capture"
+  "https://raw.githubusercontent.com/skuthus/omarchy-mac-e2e-test-capture/main/omarchy-mac-e2e-capture"
+  "https://cdn.jsdelivr.net/gh/skuthus/omarchy-mac-e2e-test-capture@main/omarchy-mac-e2e-capture"
+  "https://cdn.jsdelivr.net/gh/skuthus/omarchy-mac-e2e-test-capture@v1.2.0/omarchy-mac-e2e-capture"
 )
 
 tmp="$(mktemp)"
@@ -32,8 +33,8 @@ for url in "${urls[@]}"; do
 done
 
 if [[ "$ok" -ne 1 ]]; then
-  echo "e2e: could not download omarchy-mac-e2e-capture (DNS or network failed)" >&2
-  echo "try: curl -fsSL --doh-url https://1.1.1.1/dns-query https://skuthus.github.io/e2e | bash -s -- $*" >&2
+  echo "e2e: could not download the capture script" >&2
+  echo "try: curl -fsSL --doh-url https://1.1.1.1/dns-query https://skuthus.github.io/e2e | bash" >&2
   exit 1
 fi
 
