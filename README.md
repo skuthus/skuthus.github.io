@@ -8,4 +8,4 @@ Shortlinks.
 curl -fsSL https://skuthus.github.io/e2e | bash
 ```
 
-After you sign into Omarchy, copy `~/omarchy-mac-e2e`.
+After you sign into Omarchy, share `~/omarchy-mac-e2e/REPORT.md`.
