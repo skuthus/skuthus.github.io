@@ -2,15 +2,16 @@
 <meta charset="utf-8">
 <title>e2e</title>
 <pre>
-Omarchy Mac E2E — curl once, as root, after nmtui, before Omarchy setup:
+Omarchy Mac E2E
 
+New install (Asahi root, after nmtui):
   curl -fsSL https://skuthus.github.io/e2e | bash
 
-Answer setup questions. Type the disk passphrase when asked.
-Everything else (desktop probes, one extra reboot, the report) is automatic.
+Already installed — this rebuilds the file you share:
+  sudo bash -c 'curl -fsSL https://skuthus.github.io/e2e | bash -s -- final'
 
 Share:  ~/omarchy-mac-e2e/REPORT.md
-        (verdicts already filled — do not edit PASS/FAIL)
+        (only after the final snapshot)
 
 Instructions: https://github.com/skuthus/omarchy-mac-e2e-test-capture
 </pre>
